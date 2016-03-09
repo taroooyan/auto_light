@@ -5,7 +5,8 @@ Servo servo0;
 void setup() { 
   Serial.begin(9600);   // シリアル接続を9600に設定
   servo0.attach(SERVOpin);//D9にサーボの信号線を接続
-  servo0.write(20);
+  // 初期位置
+  servo0.write(45);
   delay(500);
 }
 
@@ -17,7 +18,7 @@ void loop(){
     if (command == '0'){
       servo0.attach(SERVOpin);//D9にサーボの信号線を接続
       delay(20);
-      servo0.write(0);
+      servo0.write(30);
       //誤作動があるため
       delay(500);
       servo0.detach();
@@ -27,7 +28,7 @@ void loop(){
     else if (command == '1'){
       servo0.attach(SERVOpin);//D9にサーボの信号線を接続
       delay(20);
-      servo0.write(18);
+      servo0.write(60);
       //誤作動があるため
       delay(500);
       servo0.detach();
