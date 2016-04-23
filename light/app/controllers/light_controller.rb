@@ -17,7 +17,7 @@ class LightController < ApplicationController
 
   def off
     render text: "証明がOFFになりました"
-    str = '1'
+    str = '0'
     com = open("/dev/ttyACM0","r+")
     system(" stty < /dev/ttyACM0 9600")
     sleep(2)
