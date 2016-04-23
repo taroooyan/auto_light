@@ -1,4 +1,6 @@
 Light::Application.routes.draw do
+  root :controller => 'light', :action => 'index'
+  get "light/index"
   get "light/on"
   get "light/off"
   # The priority is based upon order of creation: first created -> highest priority.
